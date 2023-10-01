@@ -1,0 +1,223 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  font-size: 10px;
+  font-family: 'Dongle';
+  background-color: white;
+}
+
+@font-face {
+  font-family: 'Dongle';
+  src: url(../src/fonts/Dongle-Regular.ttf);
+}
+
+.App {
+  width: 100%;
+  min-width: 240px;
+  max-width: 480px;
+  height: 100%;
+  min-height: 600px;
+  max-height: 900px;
+  /* background-color: whitesmoke; */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Header {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  /* background-color: aliceblue; */
+}
+
+.setting {
+  position: relative;
+  font-size: 1.5rem;
+  top: 10%;
+  left: 40%;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  /* border: none; */
+  /* background-color: lightyellow; */
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5); */
+}
+
+.landing {
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.kk {
+  width: 90vw;
+  min-width: 240px;
+  max-width: 480px;
+  height: 90vw;
+  min-height: 240px;
+  max-height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background: rgb(247, 150, 192); */
+  border: 1px solid black;
+  border-radius: 50%;
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5); */
+}
+
+.kk div {
+  font-size: 4rem;
+  /* background: rgb(247, 150, 192); */
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+  margin: 0 20px;
+  /* border: 1px solid black; */
+  background-color: whitesmoke;
+}
+
+.content {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: whitesmoke; */
+  /* border: 1px solid black; */
+}
+
+.img1 {
+  position: relative;
+  width: 10%;
+  height: 10%;
+  top: 5%;
+  font-size: 5rem;
+  /* background: rgb(247, 150, 192); */
+  /* background-color: yellowgreen; */
+}
+
+.img2 {
+  position: relative;
+  font-size: 5rem;
+  width: 10%;
+  height: 10%;
+  bottom: 5%;
+  /* background: rgb(247, 150, 192); */
+  /* background-color: yellowgreen; */
+}
+
+.textarea {
+  width: 90vw;
+  min-width: 240px;
+  max-width: 400px;
+  height: 90vw;
+  min-height: 240px;
+  max-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: rgb(247, 150, 192); */
+  border: 1px solid black;
+  line-height: 1.5;
+  border-radius: 50%;
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5); */
+}
+
+#input-text {
+  border: none;
+  width: 90%;
+  height: auto;
+  font-size: 2rem;
+  text-align: center;
+  vertical-align: middle;
+  /* background-color: rgb(247, 150, 192); */
+}
+
+#text {
+  font-size: 2rem;
+  width: 90%;
+  border-radius: 50%;
+  white-space: pre-wrap;
+  /* background-color: rgb(247, 150, 192); */
+}
+
+.footer {
+  width: 100%;
+  height: 15%;
+  /* background-color: whitesmoke; */
+  display: flex;
+  align-items: center;
+}
+
+.move-btn {
+  position: relative;
+  display: inline-block;
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5); */
+
+  font-size: 1.5rem;
+  width: 15%;
+  height: 45%;
+  /* background-color: lightyellow; */
+  /* border: none; */
+  border-radius: 50%;
+}
+
+.none {
+  width: 15%;
+  height: 90%;
+  /* background-color: whitesmoke; */
+  border: none;
+  border-radius: 30px;
+}
+
+.goAdd {
+  font-size: 2rem;
+  width: 50%;
+  height: 60%;
+  /* background-color: lightyellow; */
+  /* border: none; */
+  border-radius: 50px;
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5); */
+}
+
+.submit {
+  font-size: 2rem;
+  width: 50%;
+  height: 60%;
+  /* background-color: lightyellow; */
+  /* border: none; */
+  border-radius: 50px;
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5); */
+}
+
+.modal {
+  position: absolute;
+  display: flex;
+  top: 40%;
+  left: 25%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 20%;
+  border-radius: 20px;
+  border: 1px solid black;
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5); */
+}
+
+.modal button {
+  font-size: 2rem;
+  width: 90%;
+  border-radius: 20px;
+  height: 90%;
+  margin: 5%;
+}
