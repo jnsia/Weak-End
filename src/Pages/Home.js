@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Header from '../components/Header';
 import { getDatabase, ref, get, child } from 'firebase/database';
 
 function Home() {
@@ -59,7 +58,6 @@ function Home() {
 
   return (
     <div className="home">
-      <Header />
       <div className="content">
         <p className="img1">"</p>
         <div className="textarea">
