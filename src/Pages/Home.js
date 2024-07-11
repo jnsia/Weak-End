@@ -1,12 +1,12 @@
-import React, { useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { getDatabase, ref, get, child } from 'firebase/database';
+import React, { useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import { getDatabase, ref, get, child } from "firebase/database";
 
 function Home() {
   const navigate = useNavigate();
 
   function goAdd() {
-    navigate('/addText');
+    navigate("/addText");
   }
 
   const db = getDatabase();
@@ -24,7 +24,7 @@ function Home() {
 
     shuffle(TextDB);
 
-    document.querySelector('#text').innerHTML = TextDB[0];
+    document.querySelector("#text").innerHTML = TextDB[0];
   });
 
   const countRef = useRef(0);
@@ -38,7 +38,7 @@ function Home() {
       countRef.current = countRef.current + 1;
     }
 
-    document.getElementById('text').innerHTML = TextDB[countRef.current];
+    document.getElementById("text").innerHTML = TextDB[countRef.current];
     console.log(TextDB[countRef.current]);
   }
 
@@ -51,7 +51,7 @@ function Home() {
       countRef.current = countRef.current - 1;
     }
 
-    document.getElementById('text').innerHTML = TextDB[countRef.current];
+    document.getElementById("text").innerHTML = TextDB[countRef.current];
     console.log(TextDB[countRef.current]);
   }
 

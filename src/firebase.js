@@ -24,3 +24,6 @@ const app = initializeApp(firebaseConfig);
 
 // Initialize Cloud Firestore and get a reference to the service
 export const db = getDatabase(app);
+export const init = () => {
+  console.log("Firebase Init");
+}
