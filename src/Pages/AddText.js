@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getDatabase, ref, push } from 'firebase/database';
-import Header from '../components/Header';
+// import Header from '../components/Header';
 
 function AddText() {
   const navigate = useNavigate();
@@ -43,9 +43,8 @@ function AddText() {
 
   return (
     <div className="home">
-      <Header />
+      {/* <Header /> */}
       <form className="content" name="addText" action="/Texts" method="post">
-        <p className="img1">"</p>
         <div className="textarea">
           <textarea
             name="text"
@@ -56,13 +55,12 @@ function AddText() {
             onKeyUp={autoResizeTextarea}
           ></textarea>
         </div>
-        <p className="img2">"</p>
       </form>
       <div className="footer">
         <button className="move-btn" onClick={GoHome}>
           뒤로
         </button>
-        <button className="submit" type="submit" onClick={Submit}>
+        <button className="move-page-btn" type="submit" onClick={Submit}>
           저장하기
         </button>
         <button className="none"></button>

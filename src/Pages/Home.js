@@ -23,7 +23,6 @@ function Home() {
     }
 
     shuffle(TextDB);
-    console.log(TextDB);
 
     document.querySelector('#text').innerHTML = TextDB[0];
   });
@@ -59,17 +58,15 @@ function Home() {
   return (
     <div className="home">
       <div className="content">
-        <p className="img1">"</p>
         <div className="textarea">
           <div id="text"></div>
         </div>
-        <p className="img2">"</p>
       </div>
       <div className="footer">
         <button className="move-btn" onClick={Prev}>
           이전
         </button>
-        <button className="goAdd" onClick={goAdd}>
+        <button className="move-page-btn" onClick={goAdd}>
           글귀 추가하기
         </button>
         <button className="move-btn" onClick={Next}>
