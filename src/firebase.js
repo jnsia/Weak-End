@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
 import { getDatabase } from 'firebase/database';
+import { getMessaging, getToken } from "firebase/messaging";
 // import { getAnalytics } from 'firebase/analytics';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -20,10 +21,33 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const messaging = getMessaging(app);
 // const analytics = getAnalytics(app);
+
+// Add the public key generated from the console here.
+getToken(messaging, {vapidKey: 
+  process.env.REACT_APP_WEB_PUSH_CERT
+});
 
 // Initialize Cloud Firestore and get a reference to the service
 export const db = getDatabase(app);
 export const init = () => {
   console.log("Firebase Init");
+}
+export function requestPermission() {
+  console.log('Requesting permission...');
+  Notification.requestPermission().then((permission) => {
+    if (permission === 'granted') {
+      messaging
+        .getToken({ vapidKey: process.env.REACT_APP_WEB_PUSH_CERT })
+        .then((token) => {
+          console.log(`푸시 토큰 발급 완료 : ${token}`)
+        })
+        .catch((err) => {
+          console.log('푸시 토큰 가져오는 중에 에러 발생')
+        })
+    } else if (permission === 'denied') {
+      console.log('푸시 권한 차단')
+    }
+  })
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getDatabase, ref, push } from 'firebase/database';
+import MoveButton from '../components/MoveButton';
 // import Header from '../components/Header';
 
 function AddText() {
@@ -45,7 +46,7 @@ function AddText() {
     <div className="home">
       {/* <Header /> */}
       <form className="content" name="addText" action="/Texts" method="post">
-        <div className="textarea">
+        <div className="circle bs-primary">
           <textarea
             name="text"
             type="text"
@@ -57,9 +58,7 @@ function AddText() {
         </div>
       </form>
       <div className="footer">
-        <button className="move-btn" onClick={GoHome}>
-          뒤로
-        </button>
+        <MoveButton text="뒤로" move={GoHome} />
         <button className="move-page-btn" type="submit" onClick={Submit}>
           저장하기
         </button>

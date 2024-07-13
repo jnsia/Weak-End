@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { getDatabase, ref, get, child } from "firebase/database";
+import MoveButton from "../components/MoveButton";
 
 function Home() {
   const navigate = useNavigate();
@@ -29,7 +30,7 @@ function Home() {
 
   const countRef = useRef(0);
 
-  function Next() {
+  function next() {
     const TextDB = texts.text;
 
     if (countRef.current === TextDB.length - 1) {
@@ -42,7 +43,7 @@ function Home() {
     console.log(TextDB[countRef.current]);
   }
 
-  function Prev() {
+  function prev() {
     const TextDB = texts.text;
 
     if (countRef.current === 0) {
@@ -58,20 +59,16 @@ function Home() {
   return (
     <div className="home">
       <div className="content">
-        <div className="textarea">
+        <div className="circle bs-primary">
           <div id="text"></div>
         </div>
       </div>
       <div className="footer">
-        <button className="move-btn" onClick={Prev}>
-          이전
-        </button>
-        <button className="move-page-btn" onClick={goAdd}>
+        <MoveButton text="이전" move={prev} />
+        <button className="move-page-btn bs-primary" onClick={goAdd}>
           글귀 추가하기
         </button>
-        <button className="move-btn" onClick={Next}>
-          다음
-        </button>
+        <MoveButton text="다음" move={next} />
       </div>
     </div>
   );

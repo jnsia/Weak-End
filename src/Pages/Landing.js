@@ -10,7 +10,7 @@ function Landing() {
 
   return (
     <div className="landing">
-      <div className="kk" onClick={GoHome}>
+      <div className="circle bs-primary" onClick={GoHome}>
         <br />
         <div>Weak? End.</div>
         <div>We Can Do!</div>
