@@ -59,7 +59,7 @@ function AddText() {
       </form>
       <div className="footer">
         <MoveButton text="뒤로" move={GoHome} />
-        <button className="move-page-btn" type="submit" onClick={Submit}>
+        <button className="move-page-btn bs-primary" type="submit" onClick={Submit}>
           저장하기
         </button>
         <button className="none"></button>

@@ -21,13 +21,13 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const messaging = getMessaging(app);
+const messaging = getMessaging(app)
 // const analytics = getAnalytics(app);
 
 // Add the public key generated from the console here.
-getToken(messaging, {vapidKey: 
-  process.env.REACT_APP_WEB_PUSH_CERT
-});
+// getToken(messaging, {vapidKey: 
+//   process.env.REACT_APP_WEB_PUSH_CERT
+// });
 
 // Initialize Cloud Firestore and get a reference to the service
 export const db = getDatabase(app);
@@ -38,8 +38,7 @@ export function requestPermission() {
   console.log('Requesting permission...');
   Notification.requestPermission().then((permission) => {
     if (permission === 'granted') {
-      messaging
-        .getToken({ vapidKey: process.env.REACT_APP_WEB_PUSH_CERT })
+      getToken(messaging, { vapidKey: process.env.REACT_APP_WEB_PUSH_CERT })
         .then((token) => {
           console.log(`푸시 토큰 발급 완료 : ${token}`)
         })
