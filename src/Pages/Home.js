@@ -17,7 +17,7 @@ function Home() {
 
   get(child(dbRef, `text`)).then((snapshot) => {
     texts = { text: Object.values(snapshot.val()) };
-    const TextDB = texts.text;
+    const TextDB = texts?.text;
 
     function shuffle(arr) {
       arr.sort(() => Math.random() - 0.5);
@@ -31,7 +31,7 @@ function Home() {
   const countRef = useRef(0);
 
   function next() {
-    const TextDB = texts.text;
+    const TextDB = texts?.text;
 
     if (countRef.current === TextDB.length - 1) {
       countRef.current = 0;
