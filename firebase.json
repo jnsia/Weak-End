@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "build",
+    "region": "asia-southeast1",
     "ignore": [
       "firebase.json",
       "**/.*",
