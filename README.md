@@ -1,4 +1,4 @@
-# Weak? End. We Can Do!
+# Weak End
 
 ## 릴리즈 노트
 
